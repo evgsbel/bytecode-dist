@@ -478,6 +478,10 @@
   .additionally
     &__btn
       margin: 20px auto 0
+@media (max-width: 375.98px)
+  .feedback
+    &__wrapper
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
 @media (max-width: 360.98px)
   .grid-layout, .help, .platform, .soft, .interface, .compare, .package, .feedback, .contacts, .additionally, .footer, .about, .header-mobile
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
@@ -494,4 +498,7 @@
     padding-bottom: 0
   .soft-mobile__slide
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+  .feedback
+    &__wrapper
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
 
