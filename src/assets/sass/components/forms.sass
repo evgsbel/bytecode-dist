@@ -1,0 +1,21 @@
+.form
+  max-width: 100%
+  &__input, &__comm
+    max-width: 100%
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    border: 1px solid #D2D2D2
+    padding-left: 30px
+    color: $black1
+    display: block
+    &::placeholder
+      color: $black1
+    &:focus
+      outline: none
+      font-family: $medium, serif
+      &::placeholder
+        font-family: $medium, serif
+  &__comm
+    padding-top: 15px
+

@@ -1,0 +1,38 @@
+.radio input
+  position: absolute
+  z-index: -1
+  opacity: 0
+  margin: 10px 0 0 7px
+
+.radio__text
+  position: relative
+  padding: 0 0 0 55px
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    top: -13px
+    left: 0
+    width: 41px
+    height: 41px
+    border: 2px solid #FFFFFF
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25)
+    border-radius: 50%
+    background: #F1F1F1
+    box-sizing: border-box
+  &:after
+    content: ''
+    position: absolute
+    top: -4px
+    left: 9px
+    width: 23px
+    height: 23px
+    border-radius: 50%
+    background: linear-gradient(180deg, #E10000 0%, #FF4013 100%)
+    box-shadow: 0px 2px 2px #E08A8A
+    opacity: 0
+    transition: .2s
+
+.radio input
+  &:checked + .radio__text:after
+    opacity: 1

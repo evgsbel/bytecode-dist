@@ -1,0 +1,50 @@
+.slider-arrow
+  position: absolute
+  background-color: transparent
+  border: 0
+  transition: $trans
+  svg
+    stroke: #fff
+    transition: $trans
+  &:hover svg
+    stroke: #000
+  &:focus,&active
+    outline: none
+  &.disabled
+    svg
+      stroke: #C4C4C4
+  &__wrp
+    position: absolute
+    top: 0%
+    width: 1440px
+    max-width: 100%
+    left: 0
+    right: 0
+    margin: 0 auto
+    &_packages
+      top: 100px
+    &_methodology
+      top: 4%
+    &_soft-mobile
+      top: 42%
+  &_red
+    svg
+      stroke: $red2
+  &_white
+    svg
+      stroke: $white
+      stroke-width: 3px
+  &_prev
+    left: 0
+    &_methodology
+      left: -50px
+    &_soft-mobile
+      left: -15px
+  &_next
+    right: 0
+    &_methodology
+      right: -50px
+    &_soft-mobile
+      right: -15px
+
+
