@@ -4,6 +4,8 @@ import 'owl.carousel';
 import '@fancyapps/fancybox'
 import 'select2/dist/js/select2.min'
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
+import './js/animation'
+import './js/tabs.js'
 import './js/app'
 
 // SCSS
@@ -18,7 +20,7 @@ function requireAll(r) {
 }
 requireAll(require.context('./assets/img/svg/', true, /\.svg$/));
 
-fetch(`./assets/img/svg//sprite.svg`).then(res => {
+fetch(`./assets/img/svg/sprite.svg`).then(res => {
   return res.text();
 }).then(data => {
   document.getElementById('svg-icons').innerHTML = data;

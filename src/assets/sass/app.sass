@@ -306,16 +306,28 @@ p
       text-decoration: none
       &:hover
          color: $red
-    &-item.is-active .service__content-title, .synced .service__content-title
+    .cd-tabs__item--selected, .synced .service__content-title
       color: $red
     &-text
       display: none
-    &-item.is-active .service__content-text, .synced .service__content-text
+    .cd-tabs__item--selected + .service__content-text, .synced .service__content-text
       display: block
-.tabs-panel, .tabs-panel-c
-  display: none
-.tabs-panel.is-active, .tabs-panel-c.is-active
-  display: block
+  .cd-tabs__panel
+    display: none
+    animation: cd-fade-out 0.1s
+  .cd-tabs__panel--selected
+    display: block
+    animation: cd-fade-in 1.5s
+  @keyframes cd-fade-in
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+  @keyframes cd-fade-out
+    0%
+      opacity: 1
+    100%
+      opacity: 0
 
 //necessary
 .necessary
@@ -341,6 +353,7 @@ p
     grid-column: 3/ span 6
   &__img
     grid-column: 10 / span 16
+    margin-top: 60px
   &__item
     margin-bottom: 20px
     &-title
@@ -426,7 +439,6 @@ p
       border-radius: 3px
 //compare
 .compare
-  display: none
   position: relative
   display: grid
   grid-template-columns: repeat(16, 1fr)
@@ -504,6 +516,7 @@ p
   &__mobile-nav
     text-align: center
     margin-bottom: 30px
+    display: none
     &-item
       font-family: $bold, serif
       a
@@ -641,6 +654,12 @@ p
       align-items: center
       position: relative
       box-sizing: border-box
+      a
+        color: $black1
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+          color: $red2
       &:nth-child(odd)
         background-color: #F2F2F2
       &:before
@@ -845,6 +864,7 @@ p
         background-repeat: no-repeat
     &_title
       font-family: $bold
+      color: $black1
       font-size: 40px
       padding-bottom: 0.25em
     &_item

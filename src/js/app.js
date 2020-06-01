@@ -27,25 +27,6 @@ $(() => {
 });
 
 //tabs
-const tabLinks = document.querySelectorAll(".tabs a");
-const tabPanels = document.querySelectorAll(".tabs-panel");
-
-for (let el of tabLinks) {
-    el.addEventListener("click", e => {
-        e.preventDefault();
-
-        document.querySelector(".tabs div.is-active").classList.remove("is-active");
-        document.querySelector(".tabs-panel.is-active").classList.remove("is-active");
-
-        const parentListItem = el.parentElement;
-        parentListItem.classList.add("is-active");
-        const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
-
-        const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
-        panel[0].classList.add("is-active");
-    });
-}
-//tabs
 const tabLinksC = document.querySelectorAll(".tabs-c a");
 const tabPanelsC = document.querySelectorAll(".tabs-panel-c");
 
@@ -66,13 +47,29 @@ for (let el of tabLinksC) {
 }
 
 //checkbox
-$('.js-package__input').change(function () {
+//checkbox
+$('.js-package__input_right').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
+        $('.js-result-price_right').html('3 290');
+
     } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
+        $('.js-result-price_right').html('3 650');
+
+    }
+});
+$('.js-package__input_left').change(function () {
+    if ($(this).is(':checked')) {
+        $(this).parent().removeClass('unchecked');
+        $(this).parent().addClass('checked');
+        $('.js-result-price_left').html('1 830');
+    } else {
+        $(this).parent().removeClass('checked');
+        $(this).parent().addClass('unchecked');
+        $('.js-result-price_left').html('2 010');
     }
 });
 
