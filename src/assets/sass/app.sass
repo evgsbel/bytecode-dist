@@ -262,7 +262,6 @@ p
     display: flex
     flex-direction: column
     justify-content: space-between
-    letter-spacing: 0.025em
 
 //service
 .service
@@ -865,8 +864,9 @@ p
       color: $black0
       display: block
       span
+        transition: $trans
         &:hover
-          text-decoration: underline
+          color: $red2
         &:before
           width: 16px
           height: 16px
@@ -1013,8 +1013,11 @@ p
   &__phone
     color: $white
     display: inline-block
+    text-decoration: none
     b
       font-size: 20px
+    &:hover
+      color: $red2
     &:before
       width: 17px
       height: 17px

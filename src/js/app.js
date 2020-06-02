@@ -51,12 +51,12 @@ $('.js-package__input_right').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
-        $('.js-result-price_right').html('3 290');
+        $('.js-result-price_right').html('3 960');
 
     } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
-        $('.js-result-price_right').html('3 650');
+        $('.js-result-price_right').html('4 320');
 
     }
 });
@@ -64,11 +64,11 @@ $('.js-package__input_left').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
-        $('.js-result-price_left').html('1 830');
+        $('.js-result-price_left').html('2 500');
     } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
-        $('.js-result-price_left').html('2 010');
+        $('.js-result-price_left').html('2 620');
     }
 });
 
