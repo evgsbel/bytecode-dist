@@ -47,7 +47,6 @@ for (let el of tabLinksC) {
 }
 
 //checkbox
-//checkbox
 $('.js-package__input_right').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
@@ -184,7 +183,7 @@ $(() => {
                 const $owlSlider = sync1.data('owl.carousel');
                 $owlSlider.to(number, 100, true);
             });
-            $('.service__monitor').find('.tabs-panel').removeClass('tabs-panel');
+            $('.service__monitor').find('.cd-tabs__panel').removeClass('cd-tabs__panel');
             $('.js-packages-slider').owlCarousel({
                 loop: true,
                 items: 1,
@@ -232,17 +231,15 @@ $(() => {
     });
 });
 
-//scroll bar
-// $('.js-scrollbar').mCustomScrollbar({
-//     axis: 'y',
-//     theme: 'dark-thick',
-//     scrollInertia: '330',
-//     setHeight: 570,
-//     scrollButtons: true,
-//     scrollButtons: {enable: true}
-// });
-
+//header video autoplay
 $(() => {
+  $('.js-play-video').click(function (ev) {
+    $(this).addClass('is-playing')
+    $('.header__video_play').fadeOut(100);
+    $('.header__video_overlay').fadeOut(100);
+    $('.header__video_frame').fadeIn(100);
+    $(".header__video_frame")[0].src += "?autoplay=1";
+  })
+})
 
-});
 

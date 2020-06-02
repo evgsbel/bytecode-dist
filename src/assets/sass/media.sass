@@ -5,8 +5,6 @@
     max-height: 480px
   .help, .platform, .soft, .interface, .package, .steps, .feedback, .contacts, .additionally, .compare, .footer
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
-  .platform__item_mobile
-    top: -160vh
   .with-work
     margin-top: 60px
   .about
@@ -22,8 +20,6 @@
     max-width: 40%
   .modal
     margin: 50px 0
-  .platform__white
-    height: 90%
   .necessary
     &__img
       grid-column: 9/span 16
@@ -41,15 +37,6 @@
     padding: 2%
     svg
       max-width: 100%
-  .platform__item_desktop
-    grid-column: 1/12
-  .platform__item_tablet
-    grid-column: 9 / 11
-    top: -70vh
-    left: 20vw
-  .platform__item_mobile
-    top: -80vh
-    grid-column: 12 / 13
   .package__text
     height: 255px
   .necessary
@@ -157,8 +144,6 @@
     &__img
       grid-column: 2/span 16
       margin-top: -140px
-  .platform
-    max-height: 750px
     &__white
       height: 95%
     &__content
@@ -240,10 +225,6 @@
     &__monitor
       margin-left: 0
       grid-column: 1/span 9
-  .platform
-    max-height: 510px
-    &__item_mobile
-      top: -75vh
   .interface
     padding-bottom: 0
     &__wrapper
@@ -259,7 +240,6 @@
     -webkit-background-size: cover
     background-size: cover
     &__wrapper
-      grid-column: 2 / span 9
       grid-template-rows: repeat(3, 50px)  135px 50px
     &__input
       grid-column: 1/span 3
@@ -365,7 +345,6 @@
       grid-column: 1/span 4
     &__img
       grid-column: 1/span 4
-      margin-top: -200px
       margin-bottom: -220px
       margin-right: -15px
       margin-left: -15px
@@ -378,13 +357,14 @@
         right: -30px
     &__btn
       margin: 40px auto 0
+      span
+        margin: 0
   .compare
     margin-right: -15px
     margin-left: -15px
   .platform
     margin-right: -30px
     margin-left: -30px
-    max-height: 415px
     &__content
       margin-left: -15px
       margin-right: -15px
@@ -411,7 +391,6 @@
     &__wrapper
       grid-column: 1/ span 4
       box-sizing: border-box
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
     &__recaptcha, &__input, &__comm, &__file-wrapper, &__confidencial, &__submit
       grid-column: 1/ span 4
       max-width: 100%
@@ -442,7 +421,7 @@
     margin-right: -15px
     margin-left: -15px
     grid-column: 1/span 4
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(1, 4fr)
     img
       grid-column: 1/span 4
       width: 100%
@@ -490,8 +469,6 @@
 @media (max-width: 360.98px)
   .grid-layout, .help, .platform, .soft, .interface, .compare, .package, .feedback, .contacts, .additionally, .footer, .about, .header-mobile
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
-  .platform
-    max-height: 700px
     &__item_tablet
       top: -18vh
     &__item_mobile

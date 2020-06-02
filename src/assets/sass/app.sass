@@ -194,6 +194,8 @@ p
     border-radius: 5px
     transition: $trans
     cursor: pointer
+    &.is-playing
+      background-image: none
     &_play
       display: flex
       justify-content: center
@@ -222,20 +224,37 @@ p
       width: 100%
       height: 100%
       border-radius: 5px
+    &_frame
+      display: none
+    &:hover
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
+    &:hover &_play
+        width: 76px
+        height: 76px
+    &_overlay
+      background-color: $black1
+      opacity: .7
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border-radius: 5px
   &__nav
     grid-column: 3/15
     display: flex
     justify-content: space-between
     padding-top: 60px
     &_item
-      height: 50px
-      justify-content: center
-      text-align: left
-      box-sizing: border-box
-      padding: 5px 30px
-      font-family: $medium, serif
-      color: $black1
       text-decoration: none
+      span
+        height: 50px
+        justify-content: center
+        text-align: left
+        box-sizing: border-box
+        padding: 5px 30px
+        font-family: $medium, serif
+        color: $black1
 .logo
   &__title
     font-size: 13px
@@ -364,10 +383,13 @@ p
       padding-left: 55px
       display: block
   &__btn
-    height: 50px
     width: 302px
-    margin-top: 40px
-    margin-left: 55px
+    display: block
+    span
+      height: 50px
+      margin-top: 40px
+      margin-left: 55px
+
 // platform
 .platform
   grid-column: 1 / span 16
@@ -378,17 +400,15 @@ p
   margin-top: 60px
   padding-top: 60px
   overflow: hidden
-  max-height: 950px
   &__white
     background-color: $white
     grid-column: 1 /  span 16
-    z-index: 1
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1)
     position: absolute
     right: 0
     top: 0
     width: 100%
-    height: 95%
+    height: 92%
     z-index: -1
   &__content
     margin-top: 1.5em
@@ -417,7 +437,7 @@ p
   &:before
     content: ''
     position: absolute
-    top: -575px
+    top: -610px
     z-index: -1
     left: 0
     width: 412px
@@ -537,36 +557,10 @@ p
       font-family: $bold, serif
       display: block
       margin: 15px 0
-
-
-
-
-
-//interface
-.interface
-  position: relative
-  display: grid
-  grid-template-columns: repeat(16, 1fr)
-  grid-template-rows: minmax(100px, auto)
-  padding-bottom: 100px
-  grid-column: 3 / span 12
-  &__wrapper
-    max-width: 30%
-    p
-      margin-bottom: 50px
+  .tabs-panel-c
+    display: none
+    &.is-active
       display: block
-    span
-      color: $red
-      font-family: $bold, serif
-  &__btns
-    display: flex
-  &__btn
-    height: 50px
-    margin-right: 20px
-    &_red
-      width: 106px
-    &_trns
-      width: 251px
 //package
 .package
   display: grid
@@ -574,7 +568,6 @@ p
   grid-template-rows: minmax(100px, auto)
   padding-bottom: 70px
   grid-column: 1 /span 16
-  z-index: -1
   background-color: $white
   position: relative
   z-index: 15
@@ -676,15 +669,13 @@ p
         &:nth-child(odd)
           background-color: #FFF0ED
         &:before
-          content: '+'
+          content: ''
+          height: 8px
+          width: 8px
           left: 12px
-          top: 35%
+          top: 45%
           display: block
-          color: $red
-          font-family: $boldBlack, serif
-          background-image: none
-          font-size: 18px
-          line-height: 1
+          background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.65 4.95H5.175V7.35H2.475V4.95H0V2.4H2.475V0H5.175V2.4H7.65V4.95Z' fill='%23FF4013'/%3E%3C/svg%3E%0A")
     &-opacity
       opacity: 0
   &__price
@@ -705,6 +696,7 @@ p
       sup
         color: $red2
   &__btn
+    display: block
     height: 50px
     width: 286px
     margin: 0 auto
@@ -722,8 +714,6 @@ p
   &__checkbox-text
     padding-top: 20px
     margin: 0 15px
-
-
 //feedback
 .feedback
   grid-column: 1 / span 16
@@ -732,7 +722,6 @@ p
   grid-template-rows: minmax(100px, auto)
   padding-top: 62px
   padding-bottom: 70px
-  margin-top: 70px
   background-image: url('../img/feed-bg.png')
   background-color: $black2
   -webkit-background-size: cover
@@ -873,7 +862,11 @@ p
     &_phone
       font-family: $bold, serif
       font-size: 20px
+      color: $black0
+      display: block
       span
+        &:hover
+          text-decoration: underline
         &:before
           width: 16px
           height: 16px
@@ -892,6 +885,8 @@ p
           height: 12px
           top: 10px
           background-image: url("data:image/svg+xml,%3Csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.04549 1.33333C1.67206 1.33333 1.36368 1.63486 1.36368 2V10C1.36368 10.3651 1.67206 10.6667 2.04549 10.6667H12.9545C13.3279 10.6667 13.6363 10.3651 13.6363 10V2C13.6363 1.63486 13.3279 1.33333 12.9545 1.33333H2.04549ZM5.57834e-05 2C5.57834e-05 0.898477 0.918945 0 2.04549 0H12.9545C14.0811 0 14.9999 0.898477 14.9999 2V10C14.9999 11.1015 14.0811 12 12.9545 12H2.04549C0.918945 12 5.57834e-05 11.1015 5.57834e-05 10V2Z' fill='%231E2127'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.123308 1.61768C0.339248 1.31604 0.764383 1.24271 1.07287 1.45386L7.5 5.85291L13.9271 1.45386C14.2356 1.24271 14.6607 1.31604 14.8767 1.61768C15.0926 1.91931 15.0176 2.335 14.7091 2.54614L7.891 7.21281C7.65624 7.37349 7.34377 7.37349 7.10901 7.21281L0.290879 2.54614C-0.0176067 2.335 -0.0926323 1.91931 0.123308 1.61768Z' fill='%231E2127'/%3E%3C/svg%3E%0A")
+        &:hover
+          text-decoration: underline
     &_worktime
       span
         &:before
@@ -904,7 +899,7 @@ p
 .map
   grid-column: 1 / span 16
   display: grid
-  grid-template-columns: repeat(16, 1fr)
+  grid-template-columns: repeat(1, 1fr)
   grid-template-rows: minmax(100px, auto)
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.1)
   img
@@ -944,6 +939,8 @@ p
     padding-top: 2em
     padding-left: 15px
   &__btn
+    text-decoration: none
+    display: block
     margin-top: 20px
     height: 50px
     width: 302px
@@ -1014,6 +1011,8 @@ p
       background-repeat: no-repeat
       display: block
   &__phone
+    color: $white
+    display: inline-block
     b
       font-size: 20px
     &:before
@@ -1066,6 +1065,7 @@ p
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   border-radius: 3px
   overflow: visible
+  margin: 50px 0
   .form
     margin: 0 auto
   .title
