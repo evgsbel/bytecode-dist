@@ -1,11 +1,14 @@
 import TimelineMax from 'TimelineMax'
 import ScrollMagic from 'ScrollMagic'
+import TweenMax from 'TweenMax'
+import CSSRulePlugin from 'CSSRulePlugin'
 import 'animation.gsap'
 import 'debug.addIndicators'
 
 $(() => {
     $(window).on('load', function () {
-        let tl1p1 = new TimelineMax(),
+        let
+            tl1p1 = new TimelineMax(),
             tl1p2 = new TimelineMax(),
             tl2p1 = new TimelineMax(),
             tl2p2 = new TimelineMax(),
@@ -25,9 +28,9 @@ $(() => {
             .staggerFromTo('.banner__center', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
         // .staggerFromTo('.banner__descr', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
         tl1p2
-           .fromTo('.package__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
-          .staggerFromTo('.package__item_left', .4, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.5)
-          .staggerFromTo('.package__item_right', .2, {x: 30, opacity: 0}, {x: 0, opacity: 1}, .3)
+            .fromTo('.package__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
+            .staggerFromTo('.package__item_left', .4, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.5)
+            .staggerFromTo('.package__item_right', .2, {x: 30, opacity: 0}, {x: 0, opacity: 1}, .3)
         tl2p1
             .fromTo('.trust__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
             .staggerFromTo('.trust__subttl', .5, {y: 30, opacity: 0}, {y: 0, opacity: 1}, "-=0.7")
@@ -36,10 +39,9 @@ $(() => {
             .fromTo('.test__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
             .staggerFromTo('.test__item', .3, {x: -10, opacity: 0}, {x: 0, opacity: 1}, .2)
         tl3p1
-            .staggerFromTo('.steps__item', .1, {rotationY: -40, x: -10, opacity: 0}, {
-                rotationY: 0,
-                x: 0,
-                opacity: 1
+            .fromTo('.necessary__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
+            .staggerFromTo('.radio__text:before', .1, {background: '#F1F1F1'}, {
+                background: 'blue'
             }, 0.2)
         const scene1p1 = new ScrollMagic.Scene({
             triggerElement: ".header",
@@ -70,14 +72,14 @@ $(() => {
             .setTween(tl2p2)
             .addTo(controller);
         const scene3p1 = new ScrollMagic.Scene({
-            triggerElement: ".methodology",
+            triggerElement: ".necessary",
             triggerHook: 0.6,
             // reverse: false,
         })
             .setTween(tl3p1)
             .addTo(controller);
         const scene3p2 = new ScrollMagic.Scene({
-            triggerElement: ".methodology",
+            triggerElement: ".necessary",
             triggerHook: 0.6,
             // reverse: false,
         })
@@ -97,5 +99,6 @@ $(() => {
         })
             .setTween(tl4p2)
             .addTo(controller);
+
     });
 });

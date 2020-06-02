@@ -703,10 +703,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var TimelineMax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(TimelineMax__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var ScrollMagic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ScrollMagic */ "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js");
 /* harmony import */ var ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ScrollMagic__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animation.gsap */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js");
-/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animation_gsap__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! debug.addIndicators */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js");
-/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(debug_addIndicators__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var TweenMax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! TweenMax */ "./node_modules/gsap/src/minified/TweenMax.min.js");
+/* harmony import */ var TweenMax__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(TweenMax__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var CSSRulePlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! CSSRulePlugin */ "./node_modules/gsap/src/minified/plugins/CSSRulePlugin.min.js");
+/* harmony import */ var CSSRulePlugin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(CSSRulePlugin__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! animation.gsap */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js");
+/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(animation_gsap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! debug.addIndicators */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js");
+/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(debug_addIndicators__WEBPACK_IMPORTED_MODULE_5__);
+
+
 
 
 
@@ -803,14 +809,16 @@ $(function () {
       x: 0,
       opacity: 1
     }, .2);
-    tl3p1.staggerFromTo('.steps__item', .1, {
-      rotationY: -40,
-      x: -10,
+    tl3p1.fromTo('.necessary__ttl', .5, {
+      y: 30,
       opacity: 0
     }, {
-      rotationY: 0,
-      x: 0,
-      opacity: 1
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.radio__text:before', .1, {
+      background: '#F1F1F1'
+    }, {
+      background: 'blue'
     }, 0.2);
     var scene1p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
       triggerElement: ".header",
@@ -833,12 +841,12 @@ $(function () {
 
     }).setTween(tl2p2).addTo(controller);
     var scene3p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
-      triggerElement: ".methodology",
+      triggerElement: ".necessary",
       triggerHook: 0.6 // reverse: false,
 
     }).setTween(tl3p1).addTo(controller);
     var scene3p2 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
-      triggerElement: ".methodology",
+      triggerElement: ".necessary",
       triggerHook: 0.6 // reverse: false,
 
     }).setTween(tl3p2).addTo(controller);
@@ -1404,4 +1412,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.2b632d8bf292d7434113.js.map
+//# sourceMappingURL=app.17e83c48c5315e4f06ca.js.map

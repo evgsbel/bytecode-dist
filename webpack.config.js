@@ -146,6 +146,8 @@ module.exports = {
             'TweenMax': 'gsap/src/minified/TweenMax.min.js',
             'TimelineLite': 'gsap/src/minified/TimelineLite.min.js',
             'TimelineMax': 'gsap/src/minified/TimelineMax.min.js',
+            'CSSRulePlugin': 'gsap/src/minified/plugins/CSSRulePlugin.min.js',
+            'CSSPlugin': 'gsap/src/minified/plugins/CSSPlugin.min.js',
             'ScrollMagic': 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
             'animation.gsap': 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
             'debug.addIndicators': 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
