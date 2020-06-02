@@ -764,13 +764,13 @@ $(function () {
     }, {
       opacity: 1,
       y: 0
-    }, .5).staggerFromTo('.package__item_left', .4, {
+    }, .5).staggerFromTo('.package__item_left', .3, {
       x: -30,
       opacity: 0
     }, {
       x: 0,
       opacity: 1
-    }, 0.5).staggerFromTo('.package__item_right', .2, {
+    }, 0.5).staggerFromTo('.package__item_right', .1, {
       x: 30,
       opacity: 0
     }, {
@@ -831,7 +831,7 @@ $(function () {
 
     }).setTween(tl1p2).addTo(controller);
     var scene2p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
-      triggerElement: ".interface",
+      triggerElement: ".package",
       triggerHook: 0.6 // reverse: false,
 
     }).setTween(tl2p1).addTo(controller);
@@ -1412,4 +1412,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.17e83c48c5315e4f06ca.js.map
+//# sourceMappingURL=app.a87fd7d338f8d142cc57.js.map

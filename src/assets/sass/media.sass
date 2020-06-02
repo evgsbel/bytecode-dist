@@ -198,6 +198,7 @@
     grid-column: 1/span 9
   .header
     padding-top: 0
+    z-index: 5
     &-design:after, &-design:before
       content: none
     &__topbar
@@ -475,11 +476,6 @@
       margin: 20px auto 0
   .presentation .feedback__input:nth-child(4), .presentation .feedback__input:nth-child(5), .presentation .feedback__input
     width: 100%
-
-@media (max-width: 375.98px)
-  .feedback
-    &__wrapper
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
 @media (max-width: 360.98px)
   .grid-layout, .help, .platform, .soft, .interface, .compare, .package, .feedback, .contacts, .additionally, .footer, .about, .header-mobile
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
