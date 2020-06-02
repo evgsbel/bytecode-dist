@@ -809,16 +809,13 @@ $(function () {
       x: 0,
       opacity: 1
     }, .2);
-    tl3p1.fromTo('.necessary__ttl', .5, {
+    tl3p1 //.fromTo('.necessary__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
+    .staggerFromTo('.radio__text_after', .3, {
       y: 30,
       opacity: 0
     }, {
       opacity: 1,
       y: 0
-    }, .5).staggerFromTo('.radio__text:before', .1, {
-      background: '#F1F1F1'
-    }, {
-      background: 'blue'
     }, 0.2);
     var scene1p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
       triggerElement: ".header",
@@ -1412,4 +1409,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.a87fd7d338f8d142cc57.js.map
+//# sourceMappingURL=app.b601bbfb47218f935511.js.map

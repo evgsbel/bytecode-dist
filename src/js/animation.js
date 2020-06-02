@@ -39,10 +39,9 @@ $(() => {
             .fromTo('.test__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
             .staggerFromTo('.test__item', .3, {x: -10, opacity: 0}, {x: 0, opacity: 1}, .2)
         tl3p1
-            .fromTo('.necessary__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
-            .staggerFromTo('.radio__text:before', .1, {background: '#F1F1F1'}, {
-                background: 'blue'
-            }, 0.2)
+            //.fromTo('.necessary__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
+            .staggerFromTo('.radio__text_after', .3, {y: 30, opacity: 0}, {
+                opacity: 1, y: 0}, 0.2)
         const scene1p1 = new ScrollMagic.Scene({
             triggerElement: ".header",
             triggerHook: 0,

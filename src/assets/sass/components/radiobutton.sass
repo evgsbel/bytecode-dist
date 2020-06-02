@@ -1,3 +1,5 @@
+.radio
+  position: relative
 .radio input
   position: absolute
   z-index: -1
@@ -8,8 +10,7 @@
   position: relative
   padding: 0 0 0 55px
   cursor: pointer
-  &:before
-    content: ''
+  &_before
     position: absolute
     top: -13px
     left: 0
@@ -20,7 +21,7 @@
     border-radius: 50%
     background: #F1F1F1
     box-sizing: border-box
-  &:after
+  &_after
     content: ''
     position: absolute
     top: -4px
@@ -34,5 +35,5 @@
     transition: .2s
 
 .radio input
-  &:checked + .radio__text:after
+  &:checked + .radio__text_after
     opacity: 1

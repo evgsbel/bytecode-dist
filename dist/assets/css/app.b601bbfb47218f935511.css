@@ -537,6 +537,9 @@ template {
 .checkbox input:checked + .checkbox__substitution:after {
   left: 36px; }
 
+.radio {
+  position: relative; }
+
 .radio input {
   position: absolute;
   z-index: -1;
@@ -547,8 +550,7 @@ template {
   position: relative;
   padding: 0 0 0 55px;
   cursor: pointer; }
-  .radio__text:before {
-    content: '';
+  .radio__text_before {
     position: absolute;
     top: -13px;
     left: 0;
@@ -559,7 +561,7 @@ template {
     border-radius: 50%;
     background: #F1F1F1;
     box-sizing: border-box; }
-  .radio__text:after {
+  .radio__text_after {
     content: '';
     position: absolute;
     top: -4px;
@@ -572,7 +574,7 @@ template {
     opacity: 0;
     transition: .2s; }
 
-.radio input:checked + .radio__text:after {
+.radio input:checked + .radio__text_after {
   opacity: 1; }
 
 .inputfile {
@@ -2490,4 +2492,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.a87fd7d338f8d142cc57.css.map*/
+/*# sourceMappingURL=app.b601bbfb47218f935511.css.map*/
