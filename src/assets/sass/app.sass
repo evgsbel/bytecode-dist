@@ -354,7 +354,6 @@ p
   grid-template-columns: repeat(16, 1fr)
   grid-template-rows: 1fr
   padding-top: 60px
-  padding-bottom: 70px
   position: relative
   &:after
     content: ''
@@ -414,16 +413,9 @@ p
     display: grid
     grid-template-columns: repeat(3, 1fr)
     position: relative
-  &__item
-    position: relative
-  &__item_desktop
-    grid-column: 1 / 9
-  &__item_tablet
-    grid-column: 5 / 11
-    top: -65vh
-  &__item_mobile
-    grid-column: 10 / 12
-    top: -155vh
+  &__link
+    display: block
+    margin-top: 40px
 //soft
 .soft
   grid-column: 1 / span 16

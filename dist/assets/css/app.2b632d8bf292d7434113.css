@@ -1077,7 +1077,6 @@ p {
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: 1fr;
   padding-top: 60px;
-  padding-bottom: 70px;
   position: relative; }
   .necessary:after {
     content: '';
@@ -1136,16 +1135,9 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative; }
-  .platform__item {
-    position: relative; }
-  .platform__item_desktop {
-    grid-column: 1 / 9; }
-  .platform__item_tablet {
-    grid-column: 5 / 11;
-    top: -65vh; }
-  .platform__item_mobile {
-    grid-column: 10 / 12;
-    top: -155vh; }
+  .platform__link {
+    display: block;
+    margin-top: 40px; }
 
 .soft {
   grid-column: 1 / span 16;
@@ -2012,6 +2004,13 @@ p {
     padding: 5px 2%; }
   .help__content {
     padding-left: 15px; }
+  .top-container {
+    grid-column: 2 / 16;
+    margin: 0 auto; }
+  .header__nav_item {
+    padding: 5px 0; }
+    .header__nav_item span {
+      padding: 5px 20px; }
   .help__img {
     max-width: 250px;
     padding: 2%; }
@@ -2020,7 +2019,11 @@ p {
   .package__text {
     height: 255px; }
   .necessary__img svg {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .footer__email span {
+    width: 50%;
+    display: inline-block;
+    padding-top: 10px; } }
 
 @media (max-width: 1367.98px) {
   .grid-layout, .platform, .soft, .interface, .package, .compare, .feedback, .contacts, .additionally, .footer, .about {
@@ -2457,4 +2460,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.3edb2e6673c2e63f2857.css.map*/
+/*# sourceMappingURL=app.2b632d8bf292d7434113.css.map*/
