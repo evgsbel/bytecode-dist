@@ -208,6 +208,7 @@
     grid-template-rows: minmax(70px, auto)
     grid-column: 1 / span 9
     grid-template-columns: repeat(9, 1fr)
+    z-index: 1
     &__content
       order: 1
       height: 100%
@@ -217,7 +218,8 @@
         display: grid
         grid-template-columns: repeat(9, 1fr)
       &-item
-        grid-column: 2/9
+        grid-column: 1/ span 9
+        padding: 0 50px
     &__title
       grid-column: 1 / span 5
       &:after

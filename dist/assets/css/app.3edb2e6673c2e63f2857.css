@@ -1365,7 +1365,8 @@ p {
       box-sizing: border-box; }
       .package__list-item a {
         color: #1e2127;
-        text-decoration: none; }
+        text-decoration: none;
+        font-family: "montserratmedium", serif; }
         .package__list-item a:hover {
           text-decoration: underline;
           color: #E10000; }
@@ -1408,8 +1409,13 @@ p {
       font-size: 15px;
       padding-bottom: 1.66em;
       display: block; }
+      .package__price-subtitle a {
+        color: #000; }
       .package__price-subtitle sup {
-        color: #E10000; }
+        color: #E10000;
+        font-size: 18px;
+        line-height: 1;
+        top: 0; }
   .package__btn {
     display: block;
     height: 50px;
@@ -2178,7 +2184,8 @@ p {
   .service {
     grid-template-rows: minmax(70px, auto);
     grid-column: 1 / span 9;
-    grid-template-columns: repeat(9, 1fr); }
+    grid-template-columns: repeat(9, 1fr);
+    z-index: 1; }
     .service__content {
       order: 1;
       height: 100%;
@@ -2188,7 +2195,8 @@ p {
         display: grid;
         grid-template-columns: repeat(9, 1fr); }
       .service__content-item {
-        grid-column: 2/9; }
+        grid-column: 1/ span 9;
+        padding: 0 50px; }
     .service__title {
       grid-column: 1 / span 5; }
       .service__title:after {
@@ -2449,4 +2457,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.bc5d5bac9c018209f562.css.map*/
+/*# sourceMappingURL=app.3edb2e6673c2e63f2857.css.map*/
