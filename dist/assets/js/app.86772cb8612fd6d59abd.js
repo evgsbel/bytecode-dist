@@ -478,7 +478,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "necessary-img-usage",
-      viewBox: "0 0 863 672",
+      viewBox: "0 0 830 672",
       url: __webpack_require__.p + "assets/img/svg/sprite.svg#necessary-img",
       toString: function () {
         return this.url;
@@ -1409,4 +1409,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.bb000ab8a1f30a3590eb.js.map
+//# sourceMappingURL=app.86772cb8612fd6d59abd.js.map
