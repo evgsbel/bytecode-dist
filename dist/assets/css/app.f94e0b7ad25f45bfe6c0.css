@@ -2309,7 +2309,11 @@ p {
     .compare__center, .compare__right {
       grid-column: 1/13; }
     .compare__mobile-nav {
-      display: block; } }
+      display: block; }
+    .compare__item {
+      height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px; } }
 
 @media (max-width: 480.98px) {
   .grid-layout, .help, .platform, .soft, .interface, .compare, .package, .feedback, .contacts, .additionally, .footer, .about, .header-mobile {
@@ -2500,4 +2504,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.3735bb3a756fe6ec4fec.css.map*/
+/*# sourceMappingURL=app.f94e0b7ad25f45bfe6c0.css.map*/
