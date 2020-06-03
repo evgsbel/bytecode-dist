@@ -546,10 +546,12 @@ template {
   opacity: 0;
   margin: 10px 0 0 7px; }
 
+.radio input:active, .radio input:focus {
+  outline: none; }
+
 .radio__text {
   position: relative;
-  padding: 0 0 0 55px;
-  cursor: pointer; }
+  padding: 0 0 0 55px; }
   .radio__text_before {
     position: absolute;
     top: -13px;
@@ -573,6 +575,11 @@ template {
     box-shadow: 0px 2px 2px #E08A8A;
     opacity: 0;
     transition: .2s; }
+
+.radio__text:active, .radio__text:focus {
+  outline: none;
+  background: none;
+  border: 0; }
 
 .radio input:checked + .radio__text_after {
   opacity: 1; }
@@ -1817,7 +1824,8 @@ p {
       outline: none; }
 
 .free {
-  margin: 50px 0; }
+  margin: 50px 0;
+  text-align: center; }
   .free .feedback__wrapper {
     display: block; }
   .free .feedback__input {
@@ -2359,7 +2367,7 @@ p {
       grid-column: 1/span 4; }
     .necessary__img {
       grid-column: 1/span 4;
-      margin-bottom: -220px;
+      margin-top: 30px;
       margin-right: -15px;
       margin-left: -15px; }
     .necessary__title {
@@ -2492,4 +2500,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.86772cb8612fd6d59abd.css.map*/
+/*# sourceMappingURL=app.3735bb3a756fe6ec4fec.css.map*/
