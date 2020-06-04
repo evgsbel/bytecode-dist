@@ -1471,7 +1471,7 @@ p {
     grid-column: 1 / span 3; }
   .feedback__recaptcha {
     grid-column: 2 / 3;
-    margin-top: 30px; }
+    margin: 30px auto 0; }
   .feedback__confidencial {
     grid-column: 1 /span 3;
     margin-top: 25px; }
@@ -1860,9 +1860,11 @@ p {
 .predesign {
   margin: 50px 0; }
 
-.result svg {
-  display: block;
-  margin: 0 auto; }
+.result {
+  display: none; }
+  .result svg {
+    display: block;
+    margin: 0 auto; }
 
 .fancybox-bg {
   background: #3D525D; }
@@ -2504,4 +2506,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.9dc0822566dfb9dccf7b.css.map*/
+/*# sourceMappingURL=app.e3a49e5d1dfd302bf89e.css.map*/

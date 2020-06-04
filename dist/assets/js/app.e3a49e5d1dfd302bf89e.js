@@ -984,7 +984,9 @@ Array.prototype.forEach.call(inputs, function (input) {
 $('[data-fancybox]').fancybox({
   btnTpl: {
     smallBtn: '<button type="button" data-fancybox-close class="modal__close" title="{{CLOSE}}">' + 'закрыть' + '<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">' + '<use xlink:href="#modal-close"></use>' + '</svg>' + "</button>"
-  }
+  },
+  clickContent: false,
+  toolbar: false
 });
 $(function () {
   function checkWidth() {
@@ -1409,4 +1411,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.9dc0822566dfb9dccf7b.js.map
+//# sourceMappingURL=app.e3a49e5d1dfd302bf89e.js.map
